@@ -1,0 +1,139 @@
+<mxfile host="Electron" modified="2025-11-19T07:48:30.578Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="F7nTIlf0CgGkHqVcml1t" version="23.1.5" type="device">
+  <diagram name="Страница — 1" id="G1g-47LvmFjtauANjlgq">
+    <mxGraphModel dx="860" dy="993" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-1" value="E 1.&amp;nbsp; Основная функциональность" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-2" value="UC 1.1. Работа со списком вакансий и мероприятий" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-3" value="F 1.1.1. Просмотр списка вакансий" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-4" value="F 1.1.4. Поиск мероприятий по названию" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-5" value="F 1.1.5. Сортировка вакансий по зарплате" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-6" value="F 1.1.6. Сортировка мероприятий по дате проведения и дате публикации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-7" value="F 1.1.7. Фильтрация вакансий по должности" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1690" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-8" value="F 1.1.8. Фильтрация мероприятий по дате проведения" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1830" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-9" value="UC 1.2. Работа с заявками" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-10" value="MS. Система успешно отобразила список вакансий" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-11" value="MS. Система успешно отобразила список мероприятий по параметрам, заданных пользователем" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="290" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-12" value="MS. Система успешно отобразила отсортированный список вакансий по заданному критерию" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="290" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-13" value="MS. Система успешно отобразила отсортированный список мероприятий по заданному критерию" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="290" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-14" value="MS. Система успешно отобразила отфильтрованный список мероприятий по заданному критерию" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1830" y="290" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-15" value="MS. Система успешно отобразила отфильтрованный&lt;br&gt;список вакансий по заданному критерию" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1690" y="290" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-16" value="F 1.1.9. Публикация информации о новой вакансии&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-17" value="MS. Система успешно сохранила данные о новой вакансии в виде индивидуальной записи" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="290" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-18" value="AS 1. Пользователь закрывает страницу публикации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-19" value="AS 2. Не все обязательные поля заполнены" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-20" value="F 1.2.1. Подача заявки на мероприятие" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-21" value="MS. Система успешно сохранила данные о поданной пользователем заявке на участие" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="290" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-22" value="F 1.2.2. Просмотр списка поданных пользователем заявок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2400" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-23" value="MS. Система успешно отобразила список поданных пользователем заявок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2400" y="290" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-24" value="F 1.2.3. Изменение данных поданной заявки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2540" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-25" value="MS. Система успешно сохранила изменённые пользователем данные редактируемой заявки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2540" y="290" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-26" value="F 1.2.4. Удаление поданной заявки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2680" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-27" value="MS. Система успешно удалила данные о поданной пользователем заявке" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2680" y="290" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-28" value="F 1.2.5. Просмотр списка заявок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2820" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-29" value="MS. Система успешно отобразила список заявок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2820" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-30" value="F 1.2.6. Смена статуса заявок" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2960" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-31" value="MS. Система успешно изменила статус заявки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2960" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-32" value="AS 1. Пользователь закрывает страницу подачи заявки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-33" value="AS 2. Не все обязательные поля заполнены" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2260" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-34" value="AS 1. Пользователь закрывает страницу редактирования заявки" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2540" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-35" value="AS 2. Не все обязательные поля заполнены" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2540" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-36" value="F 1.1.10. Публикация информации о новом мероприятии" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2110" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-37" value="MS. Система успешно сохранила данные о новом мероприятии в виде индивидуальной записи" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2110" y="290" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-38" value="AS 1. Пользователь закрывает страницу публикации" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2110" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-39" value="AS 2. Не все обязательные поля заполнены" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2110" y="485" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-40" value="F 1.1.2. Просмотр списка мероприятий" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-41" value="MS. Система успешно отобразила список мероприятий" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-42" value="F 1.1.3. Поиск вакансий по названию" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="W2zRtgSZo4a8hKgYXYlX-43" value="MS. Система успешно отобразила список вакансий по параметрам, заданных пользователем" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="290" width="120" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
