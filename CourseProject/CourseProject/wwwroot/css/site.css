@@ -1,0 +1,150 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.search-container {
+    display: flex;
+    width: auto;
+    margin: 20px 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.filter-btn {
+    padding: 8px;
+    margin-left: 10px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.clear-filter-btn {
+    background-color: transparent;
+    color: #014898;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.post-actions {
+    display: flex;
+    justify-items: end;
+}
+
+.create-event-container {
+    display: flex; 
+    width: stretch;
+}
+
+.action-form {
+    height: 37px;
+    width: 37px;
+    margin: 2.5px;
+}
+
+.create-event-btn {
+    padding: 8px 16px;
+    text-align: center;
+    width: stretch;
+}
+
+.post-container {
+    border: 1px solid;
+    border-color: #014898;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5px 5px
+}
+
+.post-text-container {
+    margin: 0 10px;
+}
+
+.profile-container {
+    align-items: center;
+    display: flex;
+    justify-items: start;
+}
+
+.photo-container {
+    display: flex;
+    width: stretch;
+    height: auto;
+    justify-content: space-around;
+}
+
+.profile-picture {
+    margin: 2.5px;
+    border-radius: 25px;
+    height: 35px;
+    width: 35px;
+}
+
+.post-date-updated {
+    margin: 10px;
+    text-align: right;
+}
+
+.header {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn {
+    background-color: #014898;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}

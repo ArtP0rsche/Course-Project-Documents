@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CourseProject.DataModels.Event>
+
+@{
+    ViewData["Title"] = "Мероприятия";
+}
+
+<head>
+    <style>
+        .delete-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="width: 20%; padding: 10px;">
+            <div class="nav-item">Личный кабинет</div>
+            <a asp-action="Index" class="nav-item">Мероприятия</a>
+            <a asp-controller="Vacancies" asp-action="Index" class="nav-item">Вакансии</a>
+        </div>
+
+        <div style="width: 80%; padding: 10px;">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск">
+                <button class="filter-btn btn"><i class="fa fa-filter" style="width: 30px"></i></button>
+            </div>
+
+            <div class="filter-container">
+                <div>Параметр фильтрации</div>
+                <button class="clear-filter-btn">Сбросить фильтры</button>
+            </div>
+
+            <div class="post-wall" style="display: flex; flex-wrap: wrap;">
+                @if (Context.Session.GetString("UserRole") == "Администратор" || Context.Session.GetString("UserRole") == "Менеджер")
+                {
+                    <div class="create-event-container">
+                        <a class="create-event-btn btn" style="margin: 0 2.5px" asp-controller="Events" asp-action="Create"><i class="fa fa-plus"></i> Создать</a>
+                        <btn class="create-report-btn btn" style="margin: 0 2.5px" title="Сформировать отчёт"><i class="fa fa-file"></i></btn>
+                    </div>
+                }
+
+                @foreach (var item in Model)
+                {
+                    <div class="post-container">
+                        <div class="post-header">
+                            <div class="profile-container">
+                                <img class="profile-picture" src="/resources/picture.jpg" />
+                                <span style="font-size: 22px; color: #FF5124; font-weight: bold">Работа России</span>
+                            </div>
+                            @if (Context.Session.GetString("UserRole") == "Администратор" || Context.Session.GetString("UserRole") == "Менеджер")
+                            {
+                                <div class="post-actions">
+                                    <a class="action-form btn" asp-action="Edit" asp-route-id="@item.EventId" title="Изменить"><i class="fa fa-edit"></i></a>
+                                    <form class="action-form" asp-action="Delete" asp-route-id="@item.EventId">
+                                        <button type="submit" class="btn delete-btn" title="Удалить"/><i class="fa fa-trash"></i>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                        <div class="post-content">
+                            <div class="photo-container">
+                                <img src="/resources/plug.png">
+                            </div>
+                            <div class="post-text-container">
+                                <h4 style="font-weight: bold;">@Html.DisplayFor(modelItem => item.Title)</h4>
+                                <h5 style="text-align: justify">@Html.DisplayFor(modelItem => item.Description)</h5>
+                                <h5>Свободных мест: @Html.DisplayFor(modelItem => item.AvailableSpace)</h5>
+                                <h5>Дата проведения: @Html.DisplayFor(modelItem => item.EventDate)</h5>
+                            </div>
+                            <div class="post-date-updated">
+                                @Html.DisplayFor(modelItem => item.UpdatedOn)
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>

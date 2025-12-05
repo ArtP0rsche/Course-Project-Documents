@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CourseProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CourseProject.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Events" asp-action="Index">
+                    <img src="/resources/logo.png"/>
+                </a>
+                @if (string.IsNullOrEmpty(Context.Session.GetString("UserRole")))
+                {
+                    <a class="btn" style="padding: 4px 16px;" asp-area="" asp-controller="Auth" asp-action="Login"><i class="fa fa-sign-in"></i> Войти</a>
+                } else
+                {
+                    <div style="display: flex; align-items: center;">
+                        <h5 style="padding: 4px 8px;">@Context.Session.GetString("UserFullname")</h5>
+                        <form class="action-form" asp-controller="Auth" asp-action="Logout">
+                            <button type="submit" class="btn" title="Выйти"/><i class="fa fa-sign-out"></i>
+                        </form>
+                    </div>
+                }
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
