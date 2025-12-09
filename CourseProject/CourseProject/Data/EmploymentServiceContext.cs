@@ -1,5 +1,8 @@
-﻿using CourseProject.DataModels;
+﻿using System;
+using System.Collections.Generic;
+using CourseProject.DataModels;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
 namespace CourseProject.Data;
 
@@ -25,7 +28,8 @@ public partial class EmploymentServiceContext : DbContext
     public virtual DbSet<Vacancy> Vacancies { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("data source=localhost;initial catalog=course_project;user id=Ghost;password=GoldenFox1", ServerVersion.Parse("8.0.44-mysql"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseMySql("data source=localhost;initial catalog=course_project;user id=логин;password=пароль", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.44-mysql"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

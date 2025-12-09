@@ -14,30 +14,8 @@ body {
     padding: 0;
 }
 
-.form-group {
-    margin: 16px 0;
-}
-
-.item {
-    margin-right: 20px;
-    font-style: normal;
-    font-size: 20px;
-    color: #014898;
-    text-decoration: none;
-    padding: 8px 12px;
-}
-
 .nav-item {
-    width: 250px;
-}
-
-.nav-item:hover {
-    background-color: #007bff;
-    border-radius: 8px;
-}
-
-.nav-item:hover * {
-    color: white;
+    margin-right: 20px;
 }
 
 .search-container {
@@ -47,56 +25,10 @@ body {
 }
 
 .search-input {
-    font-family: Arial, FontAwesome;
     width: 100%;
     padding: 10px;
-    border: 2px solid #014898;
-    border-radius: 8px;
-}
-
-.no-results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
-    color: #666;
-    padding: 20px;
-    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    margin: 10px auto;
-    width: 80%;
-    max-width: 400px;
-}
-
-.job-card {
-    border: 2px solid;
-    border-color: #014898;
-    border-radius: 8px;
-    margin: 5px;
-    padding: 10px;
-    align-content: space-evenly
-}
-
-.job-detail {
-    border: 2px solid;
-    border-color: #014898;
-    border-radius: 8px;
-    margin: 0 0 5px 0;
-    padding: 10px;
-    align-content: space-evenly;
-}
-
-.job-details {
-    width: 70%;
-    display: none;
-    margin: 5px;
-}
-
-.job-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
 }
 
 .filter-btn {
@@ -141,7 +73,7 @@ body {
 }
 
 .post-container {
-    border: 2px solid;
+    border: 1px solid;
     border-color: #014898;
     border-radius: 8px;
     margin: 5px 0;
@@ -163,19 +95,6 @@ body {
     justify-items: start;
 }
 
-.checkbox-filter {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-}
-
-.filter-checkbox {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-}
-
 .photo-container {
     display: flex;
     width: stretch;
@@ -190,10 +109,9 @@ body {
     width: 35px;
 }
 
-.post-info {
+.post-date-updated {
     margin: 10px;
-    display: flex;
-    justify-content: space-between;
+    text-align: right;
 }
 
 .header {
@@ -225,4 +143,8 @@ body {
 html {
   position: relative;
   min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
 }

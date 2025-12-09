@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace CourseProject.DataModels;
 
@@ -14,10 +13,9 @@ public partial class Request
 
     public string Content { get; set; } = null!;
 
-    public string? Status { get; set; } = null!;
+    public string Status { get; set; } = null!;
 
-    [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}", ApplyFormatInEditMode = true)]
-    public DateOnly? UpdatedOn { get; set; }
+    public DateOnly UpdatedOn { get; set; }
 
     public string? Institution { get; set; }
 

@@ -14,67 +14,31 @@
 <body>
     <div style="display: flex;">
         <div style="width: 20%; padding: 10px;">
-            <div class="nav-item">
-                @if (string.IsNullOrEmpty(Context.Session.GetString("UserRole")))
-                {
-                    <a asp-controller="Auth" asp-action="Login" class="item"><i class="fa fa-user-circle-o"></i> Личный кабинет</a>
-                } else
-                {
-                    <a asp-controller="Users" asp-action="Edit" asp-route-id="@Convert.ToInt32(Context.Session.GetString("UserId"))" class="item"><i class="fa fa-user-circle-o"></i> Личный кабинет</a>
-                }
-            </div>
-            <div class="nav-item">
-                <a asp-action="Index" class="item"><i class="fa fa-calendar"></i> Мероприятия</a>
-            </div>
-            <div class="nav-item">
-                <a asp-controller="Vacancies" asp-action="Index" class="item"><i class="fa fa-address-card"></i> Вакансии</a>
-            </div>
-            @if (Context.Session.GetString("UserRole") == "Администратор")
-            {
-                <div class="nav-item">
-                    <a asp-controller="Requests" asp-action="Index" class="item"><i class="fa fa-envelope-o"></i> Заявки</a>
-                </div>
-            }
+            <div class="nav-item">Личный кабинет</div>
+            <a asp-action="Index" class="nav-item">Мероприятия</a>
+            <a asp-controller="Vacancies" asp-action="Index" class="nav-item">Вакансии</a>
         </div>
 
         <div style="width: 80%; padding: 10px;">
             <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="&#128269; Поиск">
-                <button id="filter" class="filter-btn btn"><i class="fa fa-filter" style="width: 30px"></i></button>
+                <input type="text" class="search-input" placeholder="Поиск">
+                <button class="filter-btn btn"><i class="fa fa-filter" style="width: 30px"></i></button>
             </div>
 
-            <div style="display: none" class="filter-container">
-                <div style="display:flex; align-items: flex-start;">
-                    <div style="margin: 0 2.5px">
-                        <label>Статус:</label>
-                        <select id="filterStatus" class="filter-input">
-                            <option value="Все">Все</option>
-                            <option value="В планах">В планах</option>
-                            <option value="Отменено">Отменено</option>
-                            <option value="Проведено">Проведено</option>
-                        </select>
-                    </div>
-                    <div class="checkbox-filter">
-                        <input type="checkbox" id="filterFreeSeats" class="filter-checkbox">
-                        <label for="filterFreeSeats">Есть свободные места</label>
-                    </div>
-                </div>
-                <button style="align-self: flex-end" class="clear-filter-btn">Сбросить фильтры</button>
+            <div class="filter-container">
+                <div>Параметр фильтрации</div>
+                <button class="clear-filter-btn">Сбросить фильтры</button>
             </div>
 
-            <div id="postWall" class="post-wall" style="display: flex; flex-wrap: wrap;">
+            <div class="post-wall" style="display: flex; flex-wrap: wrap;">
                 @if (Context.Session.GetString("UserRole") == "Администратор" || Context.Session.GetString("UserRole") == "Менеджер")
                 {
                     <div class="create-event-container">
                         <a class="create-event-btn btn" style="margin: 0 2.5px" asp-controller="Events" asp-action="Create"><i class="fa fa-plus"></i> Создать</a>
-                        <form class="action-form" asp-action="ExportToXlsx">
-                            <button type="submit" class="create-report-btn btn" style="margin: 0 2.5px" title="Сформировать отчёт"><i class="fa fa-file"></i></button>
-                        </form>
+                        <btn class="create-report-btn btn" style="margin: 0 2.5px" title="Сформировать отчёт"><i class="fa fa-file"></i></btn>
                     </div>
                 }
-                <div id="noResultsMessage" class="no-results" style="display: none;">
-                    Мероприятий не найдено
-                </div>
+
                 @foreach (var item in Model)
                 {
                     <div class="post-container">
@@ -100,30 +64,11 @@
                             <div class="post-text-container">
                                 <h4 style="font-weight: bold;">@Html.DisplayFor(modelItem => item.Title)</h4>
                                 <h5 style="text-align: justify">@Html.DisplayFor(modelItem => item.Description)</h5>
-                                <h5 class="available-space">Свободных мест: @Html.DisplayFor(modelItem => item.AvailableSpace)</h5>
-                                <div style="display: flex; justify-content: space-between; align-items: center;">
-									<h5>Дата проведения: @Html.DisplayFor(modelItem => item.EventDate)</h5>
-                                    @if (!string.IsNullOrEmpty(Context.Session.GetString("UserRole")))
-                                    {
-                                        <a style="text-align: right;" class="btn" asp-controller="Requests" asp-action="Create" asp-route-eventId="@item.EventId" asp-route-userId="@Context.Session.GetString("UserId")"><i class="fa fa-share"></i> Подать заявку</a>
-                                    }
-                                </div>
+                                <h5>Свободных мест: @Html.DisplayFor(modelItem => item.AvailableSpace)</h5>
+                                <h5>Дата проведения: @Html.DisplayFor(modelItem => item.EventDate)</h5>
                             </div>
-                            <div class="post-info">
-                                @if (item.Status == "Отменено")
-                                {
-                                    <div style="color: crimson; font-weight: bold;">
-                                        <h5 class="status"><i class="fa fa-times"></i> @Html.DisplayFor(modelItem => item.Status)</h5>
-                                    </div>
-                                } else
-                                {
-                                    <div style="color: forestgreen; font-weight: bold;">
-                                        <h5 class="status"><i class="fa fa-check-square-o"></i> @Html.DisplayFor(modelItem => item.Status)</h5>
-                                    </div>
-                                }
-                                <div style="text-align: right;">
-                                    @Html.DisplayFor(modelItem => item.UpdatedOn)
-                                </div>
+                            <div class="post-date-updated">
+                                @Html.DisplayFor(modelItem => item.UpdatedOn)
                             </div>
                         </div>
                     </div>
@@ -132,85 +77,3 @@
         </div>
     </div>
 </body>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const searchInput = document.getElementById('searchInput');
-        const postWall = document.getElementById('postWall');
-        const posts = postWall.querySelectorAll('.post-container');
-        const clearFilterBtn = document.querySelector('.clear-filter-btn');
-        const filterBtn = document.getElementById('filter');
-        const filterContainer = document.querySelector('.filter-container');
-        const filterFreeSeats = document.getElementById('filterFreeSeats');
-        const filterStatusByText = document.getElementById('filterStatus');
-
-        function matchesFilters(post) {
-            const statusFilter = document.getElementById('filterStatus').value;
-            const freeSeatsChecked = document.getElementById('filterFreeSeats').checked;
-            const searchQuery = document.getElementById('searchInput').value.trim().toLowerCase();
-
-            if (statusFilter !== 'Все') {
-                const statusElement = post.querySelector('.status');
-                if (!statusElement) return false;
-
-                    const statusText = statusElement.textContent.trim();
-                    if (statusText !== statusFilter) {
-                        return false;
-                    }
-            }
-
-            if (freeSeatsChecked) {
-                const seatsElement = post.querySelector('.available-space');
-                if (!seatsElement) return false;
-
-                const seatsText = seatsElement.textContent;
-                const seatsMatch = seatsText.match(/Свободных мест:\s*(\d+)/);
-                if (!seatsMatch) return false;
-
-
-                const availableSeats = parseInt(seatsMatch[1], 10);
-                if (availableSeats <= 0) {
-                    return false;
-                }
-            }
-
-            if (searchQuery) {
-                const postText = post.textContent.toLowerCase();
-                if (!postText.includes(searchQuery)) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        function applyFilters() {
-            let hasMatches = false;
-
-            posts.forEach(post => {
-                if (matchesFilters(post)) {
-                    post.style.display = 'block';
-                    hasMatches = true;
-                } else {
-                    post.style.display = 'none';
-                }
-            });
-
-            noResultsMessage.style.display = hasMatches ? 'none' : 'flex';
-        }   
-
-        filterStatusByText.addEventListener('change', applyFilters);
-        filterFreeSeats.addEventListener('change', applyFilters);
-        searchInput.addEventListener('input', applyFilters);
-
-        filterBtn.addEventListener('click', function () {
-            filterContainer.style.display = 'flex';
-        });
-        clearFilterBtn.addEventListener('click', function() {
-            filterStatus.value = 'Все';
-            filterFreeSeats.checked = false;
-            applyFilters();
-        });
-
-    });
-</script>

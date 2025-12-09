@@ -14,7 +14,7 @@ public partial class Event
 
     public sbyte AvailableSpace { get; set; }
 
-    [DisplayFormat(DataFormatString = "{0:dd MMMM в HH:mm}", ApplyFormatInEditMode = false)]
+    [DisplayFormat(DataFormatString = "{0:dd MMMM в HH:mm}", ApplyFormatInEditMode = true)]
     public DateTime EventDate { get; set; }
 
     [DisplayFormat(DataFormatString = "{0:dd MMM yyyy}", ApplyFormatInEditMode = true)]

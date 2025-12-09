@@ -4,121 +4,92 @@
     ViewData["Title"] = "Index";
 }
 
-<div style="display: flex;">
-    <div style="width: 20%; padding: 10px;">
-        <div class="nav-item">
-            @if (string.IsNullOrEmpty(Context.Session.GetString("UserRole")))
-            {
-                <a asp-controller="Auth" asp-action="Login" class="item"><i class="fa fa-user-circle-o"></i> Личный кабинет</a>
-            }
-            else
-            {
-                <a asp-controller="Users" asp-action="Edit" asp-route-id="@Convert.ToInt32(Context.Session.GetString("UserId"))" class="item"><i class="fa fa-user-circle-o"></i> Личный кабинет</a>
-            }
-        </div>
-        <div class="nav-item">
-            <a asp-controller="Events" asp-action="Index" class="item"><i class="fa fa-calendar"></i> Мероприятия</a>
-        </div>
-        <div class="nav-item">
-            <a asp-action="Index" class="item"><i class="fa fa-address-card"></i> Вакансии</a>
-        </div>
-    </div>
-    <div style="width: 80%; padding: 10px; display: flex">
-        <div style="width: 30%;">
-            @foreach (var item in Model)
-            {
-                <div class="job-card" data-id="@item.VacancyId">
-                    <div style="font-weight: bold; font-size: 15px">@Html.DisplayFor(modelItem => item.Title)</div>
-                    @if (!string.IsNullOrEmpty(item.Workplace))
-                    {
-                        <div style="font-size: 15px">@Html.DisplayFor(modelItem => item.Workplace)</div>
-                    } else
-                    {
-                        <div style="font-size: 15px">@Html.DisplayFor(modelItem => item.Company)</div>
-                    }
-                    @if (string.IsNullOrEmpty(item.MinSalary.ToString()))
-                    {
-                        <div style="font-size: 18px">До @Html.DisplayFor(modelItem => item.MaxSalary) руб.</div>
-                    } else if (string.IsNullOrEmpty(item.MaxSalary.ToString()))
-                    {
-                        <div style="font-size: 18px">От @Html.DisplayFor(modelItem => item.MinSalary) руб.</div>
-                    } else
-                    {
-                        <div style="font-size: 18px">@Html.DisplayFor(modelItem => item.MinSalary)-@Html.DisplayFor(modelItem => item.MaxSalary) руб.</div>
-                    }
-                    <div style="font-size: 12px">Обновлено: @Html.DisplayFor(modelItem => item.UpdatedOn)</div>
-                </div>
-                }
-            </div>
-            @foreach (var item in Model)
-            {
-                <div class="job-details" data-id="@item.VacancyId">
-                    <div class="job-detail">
-                        <div style="font-size: 20px; font-weight: bold;">
-                            @Html.DisplayFor(modelItem => item.Title)
-                        </div>
-                        @if (string.IsNullOrEmpty(item.MinSalary.ToString()))
-                        {
-                            <div style="font-size: 18px">До @Html.DisplayFor(modelItem => item.MaxSalary) руб.</div>
-                        }
-                        else if (string.IsNullOrEmpty(item.MaxSalary.ToString()))
-                        {
-                            <div style="font-size: 18px">От @Html.DisplayFor(modelItem => item.MinSalary) руб.</div>
-                        }
-                        else
-                        {
-                            <div style="font-size: 18px">@Html.DisplayFor(modelItem => item.MinSalary)-@Html.DisplayFor(modelItem => item.MaxSalary) руб.</div>
-                        }
-                        <div>
-                            @Html.DisplayFor(modelItem => item.Company) • @Html.DisplayFor(modelItem => item.Region)
-                        </div>
-                        <div>
-                            Обновлено: @Html.DisplayFor(modelItem => item.UpdatedOn)
-                        </div>
-                    </div>
-                    <div class="job-detail">
-                        <div style="font-size: 20px; font-weight: bold">Должностные обязанности</div>
-                        @foreach (var responsibility in @item.Responsibility.Split("."))
-                        {
-                            <div>@responsibility</div>
-                        }
-                        <hr />
-                        <div style="font-size: 20px; font-weight: bold">Требования к кандидату</div>
-                        @foreach (var requirement in @item.Requirements.Split("."))
-                        {
-                            <div>@requirement</div>
-                        }
-                        <hr />
-                        <div style="font-size: 20px; font-weight: bold">Данные по вакансии</div>
-                        @foreach (var info in @item.JobInformation.Split("."))
-                        {
-                            <div>@info</div>
-                        }
-                        <div>@item.Region, @item.Address</div>
-                    </div>
-                </div>
-            }
-    </div>
-</div>
+<h1>Index</h1>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const jobCards = document.querySelectorAll('.job-card');
-
-        jobCards.forEach(card => {
-            card.addEventListener('click', () => {
-                document.querySelectorAll('.job-details').forEach(details => {
-                    details.style.display = 'none';
-                });
-
-                const cardId = card.getAttribute('data-id');
-                const details = document.querySelector(`.job-details[data-id="${cardId}"]`);
-                if (details.style.display === 'none' || details.style.display === '') {
-                    details.style.display = 'block';
-                } else {
-                    details.style.display = 'none';
-                }
-            });
-        });
-     });
-</script>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Workplace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Responsibility)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Requirements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobInformation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Workplace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Responsibility)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Requirements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobInformation)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VacancyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VacancyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VacancyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
