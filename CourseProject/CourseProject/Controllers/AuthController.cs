@@ -30,6 +30,9 @@ namespace CourseProject.Controllers
             {
                 HttpContext.Session.SetString("UserRole", _context.Roles.Where(r => r.RoleId == currentUser.RoleId).Select(r => r.Name).FirstOrDefault());
                 HttpContext.Session.SetString("UserFullname", $"{currentUser.Surname} {currentUser.Name} {currentUser.Patronymic}");
+                HttpContext.Session.SetString("UserId", currentUser.UserId.ToString());
+                HttpContext.Session.SetString("UserName", currentUser.Name);
+                HttpContext.Session.SetString("UserSurname", currentUser.Surname);
 
                 return RedirectToAction("Index", "Events");
             }

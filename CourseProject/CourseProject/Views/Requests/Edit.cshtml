@@ -1,0 +1,46 @@
+﻿@model CourseProject.DataModels.Request
+
+@{
+    ViewData["Title"] = "Редактирование заявки";
+}
+
+<div style="display: flex; align-items: center; justify-content: center;">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RequestId" />
+            <div class="form-group">
+                <input asp-for="UserId" type="hidden" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input asp-for="EventId" type="hidden" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label">Содержимое заявки</label>
+                <input asp-for="Content" class="form-control" />
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Status" type="hidden" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Institution" class="control-label">Учреждение</label>
+                <input asp-for="Institution" class="form-control" />
+                <span asp-validation-for="Institution" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleNumber" class="control-label">Количество человек</label>
+                <input asp-for="PeopleNumber" class="form-control" />
+                <span asp-validation-for="PeopleNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display: flex; justify-content: space-between">
+                <a class="btn" asp-controller="Users" asp-action="Edit" asp-route-id="@Convert.ToInt32(Context.Session.GetString("UserId"))">В личный кабинет</a>
+                <input type="submit" value="Сохранить изменения" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

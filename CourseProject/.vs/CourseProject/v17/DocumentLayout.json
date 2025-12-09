@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\views\\requests\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\views\\requests\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|c:\\users\\\u0430\u0440\u0442\u0451\u043C\\documents\\github\\course-project-documents\\courseproject\\courseproject\\views\\requests\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CCDCB37-6101-43F7-B4FB-1C04AD46500B}|CourseProject\\CourseProject.csproj|solutionrelative:courseproject\\views\\requests\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +38,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Events\\Index.cshtml",
               "RelativeDocumentMoniker": "CourseProject\\Views\\Events\\Index.cshtml",
               "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Events\\Index.cshtml",
               "RelativeToolTip": "CourseProject\\Views\\Events\\Index.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEQAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T15:08:14.301Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-06T09:28:47.371Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -50,36 +57,59 @@
               "RelativeDocumentMoniker": "CourseProject\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\wwwroot\\css\\site.css",
               "RelativeToolTip": "CourseProject\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAcwFwAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-12-04T14:03:33.472Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "CourseProject\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "CourseProject\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABFAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Requests\\Index.cshtml",
+              "RelativeDocumentMoniker": "CourseProject\\Views\\Requests\\Index.cshtml",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Requests\\Index.cshtml",
+              "RelativeToolTip": "CourseProject\\Views\\Requests\\Index.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAUwGUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-05T05:06:03.555Z",
+              "WhenOpened": "2025-12-09T18:00:35.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Program.cs",
-              "RelativeDocumentMoniker": "CourseProject\\Program.cs",
-              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Program.cs",
-              "RelativeToolTip": "CourseProject\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAswA0AAAAqAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RequestsController.cs",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Controllers\\RequestsController.cs",
+              "RelativeDocumentMoniker": "CourseProject\\Controllers\\RequestsController.cs",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Controllers\\RequestsController.cs",
+              "RelativeToolTip": "CourseProject\\Controllers\\RequestsController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAADwvz4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T11:43:15.749Z"
+              "WhenOpened": "2025-12-09T17:59:59.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Requests\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CourseProject\\Views\\Requests\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Requests\\Edit.cshtml",
+              "RelativeToolTip": "CourseProject\\Views\\Requests\\Edit.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwCQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-09T13:21:35.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Users\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CourseProject\\Views\\Users\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Documents\\GitHub\\Course-Project-Documents\\CourseProject\\CourseProject\\Views\\Users\\Edit.cshtml",
+              "RelativeToolTip": "CourseProject\\Views\\Users\\Edit.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T19:16:12.866Z"
             }
           ]
         }

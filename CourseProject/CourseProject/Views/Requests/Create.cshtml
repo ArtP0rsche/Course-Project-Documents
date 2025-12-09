@@ -1,0 +1,53 @@
+﻿@model CourseProject.DataModels.Request
+
+@{
+    ViewData["Title"] = "Подача заявки";
+}
+
+<div style="display: flex; align-items: center; justify-content: center;">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="UserId" type="hidden" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <input asp-for="EventId" type="hidden" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <textarea asp-for="Content" id="text" style="height: auto; resize: none; overflow: hidden;" class="form-control" placeholder="Текст заявки"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Institution" class="control-label">Учреждение</label>
+                <input asp-for="Institution" class="form-control" value="Нет"/>
+                <span asp-validation-for="Institution" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleNumber" class="control-label">Количество человек</label>
+                <input asp-for="PeopleNumber" class="form-control" value="1"/>
+                <span asp-validation-for="PeopleNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display: flex; justify-content: space-between">
+                <a asp-controller="Events" asp-action="Index" class="btn">К мероприятиям</a>
+                <input type="submit" value="Подать заявку" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<script>
+    const textarea = document.getElementById('text');
+
+    function autoResize() {
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    }
+
+    textarea.addEventListener('input', autoResize);
+    window.addEventListener('load', autoResize);
+</script>

@@ -4,42 +4,50 @@
     ViewData["Title"] = "Добавление мероприятия";
 }
 
-<hr />
-<div class="row">
+<div style="display: flex; align-items: center; justify-content: center;">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
+                <label asp-for="Title" class="control-label">Мероприятие</label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <label asp-for="Description" class="control-label">Описание</label>
+                <textarea asp-for="Description" id="text" style="height: auto; resize: none; overflow: hidden;" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AvailableSpace" class="control-label"></label>
+                <label asp-for="AvailableSpace" class="control-label">Количество мест</label>
                 <input asp-for="AvailableSpace" class="form-control" />
                 <span asp-validation-for="AvailableSpace" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EventDate" class="control-label"></label>
+                <label asp-for="EventDate" class="control-label">Дата проведения</label>
                 <input asp-for="EventDate" class="form-control"/>
                 <span asp-validation-for="EventDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="display: flex; justify-content: space-between">
+                <a asp-action="Index" class="btn">Отмена</a>
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<script>
+    const textarea = document.getElementById('text');
+
+    function autoResize() {
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    }
+
+    textarea.addEventListener('input', autoResize);
+    window.addEventListener('load', autoResize);
+</script>

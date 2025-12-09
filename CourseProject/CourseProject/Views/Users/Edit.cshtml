@@ -1,0 +1,121 @@
+﻿@model CourseProject.DataModels.User
+
+@{
+    ViewData["Title"] = "Личный кабинет";
+}
+
+<div style="display: flex;">
+    <div style="width: 20%; padding: 10px;">
+        <div class="nav-item">
+            <a asp-action="Edit" asp-route-id="@Convert.ToInt32(Context.Session.GetString("UserId"))" class="item"><i class="fa fa-user-circle-o"></i> Личный кабинет</a>
+        </div>
+        <div class="nav-item">
+            <a asp-controller="Events" asp-action="Index" class="item"><i class="fa fa-calendar"></i> Мероприятия</a>
+        </div>
+        <div class="nav-item">
+            <a asp-controller="Vacancies" asp-action="Index" class="item"><i class="fa fa-address-card"></i> Вакансии</a>
+        </div>
+    </div>
+    <div style="width: 80%; padding: 10px;">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserId" />
+            <input type="hidden" asp-for="RoleId" />
+            <div class="form-group" style="display: flex; justify-content: space-between; width: 65%">
+                <div>
+                    <label asp-for="Surname" class="control-label">Фамилия</label>
+                    <input asp-for="Surname" class="form-control"/>
+                    <span asp-validation-for="Surname" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Surname" class="control-label">Имя</label>
+                    <input asp-for="Name" class="form-control"/>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Surname" class="control-label">Отчество</label>
+                    <input asp-for="Patronymic" class="form-control"/>
+                    <span asp-validation-for="Patronymic" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group" style="min-width: 100px; width: fit-content">
+                <label asp-for="Surname" class="control-label">Имя пользователя</label>
+                <input asp-for="Username" class="form-control"/>
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="min-width: 100px; width: fit-content">
+                <label asp-for="Surname" class="control-label">Пароль</label>
+                <input asp-for="Password" class="form-control"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить изменения" class="btn btn-primary" />
+            </div>
+        </form>
+        @if (Model.Requests.Any())
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: auto">
+                            Мероприятие
+                        </th>
+                        <th>
+                            Содержимое заявки
+                        </th>
+                        <th>
+                            Учреждение
+                        </th>
+                        <th>
+                            Количество человек
+                        </th>
+                        <th>
+                            Статус заявки
+                        </th>
+                        <th>
+                            Обновлено
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Requests)
+                    {
+                        <tr>
+                            <td>
+                                @item.Event.Title
+                            </td>
+                            <td>
+                                @item.Content
+                            </td>
+                            <td>
+                                @item.Institution
+                            </td>
+                            <td>
+                                @item.PeopleNumber
+                            </td>
+                            <td>
+                                @item.Status
+                            </td>
+                            <td>
+                                @item.UpdatedOn
+                            </td>
+                            <td>
+                                <a asp-controller="Requests" asp-action="Edit" asp-route-id="@item.RequestId" class="btn" title="Редактировать"><i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="no-results">
+                У вас нет заявок
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

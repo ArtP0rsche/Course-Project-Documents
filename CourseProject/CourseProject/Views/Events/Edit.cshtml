@@ -4,48 +4,60 @@
     ViewData["Title"] = "Редактирование мероприятия";
 }
 
-<hr />
-<div class="row">
+<div style="display: flex; align-items: center; justify-content: center;">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="EventId" />
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
+                <label asp-for="Title" class="control-label">Мероприятие</label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <label asp-for="Description" class="control-label">Описание</label>
+                <textarea asp-for="Description" id="text" style="height: auto; resize: none; overflow: hidden;" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AvailableSpace" class="control-label"></label>
+                <label asp-for="AvailableSpace" class="control-label">Количество свободных мест</label>
                 <input asp-for="AvailableSpace" class="form-control" />
                 <span asp-validation-for="AvailableSpace" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EventDate" class="control-label"></label>
+                <label asp-for="EventDate" class="control-label">Дата проведения</label>
                 <input asp-for="EventDate" class="form-control" />
                 <span asp-validation-for="EventDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
+                <label asp-for="Status" class="control-label">Статус проведения</label>
+                <select asp-for="Status" class="form-control">
+                    <option value="В планах">В планах</option>
+                    <option value="Отменено">Отменено</option>
+                    <option value="Проведено">Проведено</option>
+                </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group" style="display: flex; justify-content: space-between">
+                <a asp-action="Index" class="btn">К мероприятиям</a>
+                <input type="submit" value="Сохранить изменения" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">К мероприятиям</a>
-</div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<script>
+    const textarea = document.getElementById('text');
+
+    function autoResize() {
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    }
+
+    textarea.addEventListener('input', autoResize);
+    window.addEventListener('load', autoResize);
+</script>
